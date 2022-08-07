@@ -13,11 +13,11 @@ from .models import Post
 # Create your views here.
 
 
-def home(request):
+'''def home(request):
 	context={
 		'posts': Post.objects.all()
 	}
-	return render(request, 'blog/home.html', context)
+	return render(request, 'blog/home.html', context)'''
 
 class PostListView(ListView):
 	model= Post
@@ -27,7 +27,7 @@ class PostListView(ListView):
 	paginate_by = 5
 
 class PostDetailView(DetailView):
-	model= Post
+	model= Post #<app>/<model>_<viewtype>.html, by default this class look for this tamplate.
 
 class PostCreateView(LoginRequiredMixin,CreateView):
 	model= Post
@@ -39,7 +39,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
 	model= Post
-	fields=['title', 'content']
+	fields=['title', 'content'] #<app>/<model>_form.html, by default this class look for this name in tamplate.
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user
