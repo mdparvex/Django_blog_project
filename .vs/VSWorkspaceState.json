@@ -2,15 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\blog",
-    "\\blog\\static",
-    "\\blog\\static\\blog",
     "\\blog\\templates",
     "\\blog\\templates\\blog",
     "\\Django_project",
-    "\\users",
     "\\users\\templates",
     "\\users\\templates\\users"
   ],
-  "SelectedNode": "\\Django_project\\settings.py",
+  "SelectedNode": "\\blog\\templates\\blog\\home.html",
   "PreviewInSolutionExplorer": false
 }
